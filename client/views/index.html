@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="PRM">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PRM</title>
+	 <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">	
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+   <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<nav ng-controller="navBarCtrl" class="navbar uhg_navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand uhg_logo" href="#">United Health Group</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a ui-sref="/signUp" class="navbar__item"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a ui-sref="/login" class="navbar__item"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div ui-view></div>
+
+	<!-- <footer class="index-footer">
+		<h5>	@copyright.</h5>
+	</footer> -->
+	<!--script for jquery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!--script for bootstraps-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<!--script for angularjs-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+
+	<script type="text/javascript" src="/app.js"></script>
+
+	<!--script for angular ui-route-->
+	<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+	<!--script for angular local storage-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+</body>
+</html>

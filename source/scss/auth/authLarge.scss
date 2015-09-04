@@ -1,0 +1,49 @@
+
+/* Large Devices, Wide Screens */
+
+    @media only screen and (min-width : $large-device) {
+    	.signUp-page, .login-page{
+    		background: $signUp-page-background-color;
+    		height:100%;
+    		position:absolute;
+    		top:0;
+    		bottom:0;
+    		left:0;
+    		right:0;
+    	}
+
+    	.signUp-block, .login-block{
+    		height: 100%;
+    		width: 50%;
+    		margin-top:180px;
+    		background: $signUp-block-background-color;
+    		height: 100%;
+    		border-top:3px solid #228B22;
+			border-bottom:3px solid #E8E8E8;
+			padding: 30px 50px;
+    	}
+
+    	.signUp-block_header, .login-block_header{
+    		margin-bottom: 30px;
+    	}
+
+    	.signUpForm_input-group, .loginForm_input-group{
+    		margin-bottom: 30px;
+    	}
+
+    	.signUpForm_submit-btn, .loginForm_submit-btn{
+    		margin-top: 30px;
+
+    	}
+
+        .signUpForm_required-fields, .email-error{
+            color:red;
+            margin-top:-20px;
+            margin-bottom: 20px;
+        }
+        
+        .loginForm_forgot-password{
+            margin-top:-20px;
+            margin-bottom: 20px;
+        }
+    }

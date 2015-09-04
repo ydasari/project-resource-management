@@ -1,0 +1,76 @@
+/*variables for media queries*/
+/*variables for colors*/
+/*variables for fonts*/
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .signUp-page, .login-page {
+    background: #ecf0f1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .signUp-block, .login-block {
+    height: 100%;
+    width: 50%;
+    margin-top: 180px;
+    background: #f9f6e8;
+    height: 100%;
+    border-top: 3px solid #228B22;
+    border-bottom: 3px solid #E8E8E8;
+    padding: 30px 50px; }
+  .signUp-block_header, .login-block_header {
+    margin-bottom: 30px; }
+  .signUpForm_input-group, .loginForm_input-group {
+    margin-bottom: 30px; }
+  .signUpForm_submit-btn, .loginForm_submit-btn {
+    margin-top: 30px; }
+  .signUpForm_required-fields, .email-error {
+    color: red;
+    margin-top: -20px;
+    margin-bottom: 20px; }
+  .loginForm_forgot-password {
+    margin-top: -20px;
+    margin-bottom: 20px; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  html, body {
+    height: 100%; }
+  .uhg_navbar {
+    background: #003c71; }
+  .uhg_logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-family: open-sans; }
+  .navbar__item {
+    color: #ffffff; }
+  .prm__banner {
+    background: url("prm_banner.jpg") no-repeat;
+    height: 100% auto; }
+  .middle-container {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    border-top: 3px solid #27ae60;
+    top: 0;
+    bottom: 0; }
+  .tag-line-container {
+    background: #ececec;
+    height: 500px; }
+  .project-list-container {
+    background: #6c8ab4;
+    height: 500px;
+    overflow-y: auto; }
+  .more-description {
+    height: 200px; }
+  .index-footer {
+    background: #003c71;
+    position: absolute;
+    height: auto;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    padding-left: 20px;
+    font-family: open-sans; } }

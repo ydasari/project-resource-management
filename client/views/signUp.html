@@ -1,0 +1,58 @@
+<div class="container-fluid signUp-page">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="signUp-block center-block">
+				<h3 class="text-center signUp-block_header">Please fill out your details</h3>
+				<form role="form" name="signUpForm" ng-submit="createUser()" novalidate>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 col-sm-12">
+						    <div class="input-group signUpForm_input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+								<input type="text" name="fName" ng-model="fName" placeholder="First Name" class="form-control" required>
+										
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 col-sm-12">
+							<div class="input-group signUpForm_input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+								<input type="text" name="lName" ng-model="lName" placeholder="Last Name" class="form-control" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 col-sm-12">
+							<div class="input-group signUpForm_input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+								<input type="email" name="email" ng-model="email" placeholder="Email Address" class="form-control" required>
+							</div>
+							<span class="pull-left email-error" ng-show="signUpForm.email.$dirty&&signUpForm.email.$error.email">Invalid Email.</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 col-sm-12">
+							<div class="input-group signUpForm_input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+								<input type="password" name="password" ng-model="password" placeholder="Password" class="form-control" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12 col-sm-12">
+							<div class="input-group signUpForm_input-group">
+								<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+								<input type="password" name="rePass" ng-model="rePass" placeholder="Re-enter Password" class="form-control" required>
+							</div>
+						</div>
+					</div>
+
+					<!--Error message is shown when any of the fields are empty============================================================================-->
+					<span class="pull-right signUpForm_required-fields" ng-hide="signUpForm.fName.$valid&&signUpForm.lName.$valid&&signUpForm.email.$valid&&signUpForm.password.$valid">All fields are required</span>
+					<button class="btn btn-lg btn-block btn-info signUpForm_submit-btn" ng-disabled="signUpForm.fName.$invalid || signUpForm.lName.$invalid || signUpForm.email.$invalid || signUpForm.password.$invalid">Sign Up</button>
+				</form>
+				<h5 class="text-right"><a ui-sref="/login">Already a Member? click here to login</a></h5>
+			</div>
+		</div>
+	</div>
+</div>

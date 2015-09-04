@@ -1,0 +1,65 @@
+
+/* Large Devices, Wide Screens */
+
+    @media only screen and (min-width : $large-device) {
+    	html, body{
+    		height: 100%;
+    	}
+    	.uhg_navbar{
+    		background: $navbar-color;
+    	}
+
+    	.uhg_logo{
+    		color: $navbar-text-color;
+    		font:{
+                size: 22px;
+                family: $font-family;
+            }
+    	}
+
+    	.navbar__item{
+    		color: $navbar-text-color;
+    	}
+
+    	.prm__banner{
+    		background:url("prm_banner.jpg") no-repeat;
+    		height: 100% auto;
+    	}
+
+        .middle-container{
+            height: 100%;
+            position: relative;
+            margin: 0;
+            border-top: 3px solid #27ae60;
+            top:0;
+            bottom:0;
+        }
+
+    	.tag-line-container{
+    		background: $app-left-background-color;
+    		height: 500px;
+           
+    	}
+    	.project-list-container{
+    		background: $app-right-background-color;
+    		height: 500px;
+            overflow-y: auto;
+    	}
+
+        .more-description{
+            height: 200px;
+        }
+
+        .index-footer{
+            background: $navbar-color;
+            position: absolute;
+            height: auto;
+            left: 0;
+            right: 0;
+            color: $navbar-text-color;
+            padding-left: 20px;
+            font:{
+                family:$font-family;
+            }
+        }
+    }

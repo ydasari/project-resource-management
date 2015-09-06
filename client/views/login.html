@@ -2,27 +2,30 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="login-block center-block">
+				<div class="alert alert-danger" ng-if="signupSuccess">
+					<a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Thank you for registering with us!</strong>
+				</div>
 				<h3 class="text-center login-block_header">Enter your credentials</h3>
-				<form role="form" name="loginForm"  novalidate>
+				<form role="form" name="loginForm" ng-submit="loginUser()" novalidate>
 					<div class="row">
 						<div class="col-md-12 col-lg-12 col-sm-12">
 							<div class="input-group loginForm_input-group">
 								<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-								<input type="email" name="email" ng-model="candidateEmail" placeholder="Email Address" class="form-control" required>
+								<input type="email" name="email" ng-model="loginEmail" placeholder="Email Address" class="form-control" required>
 							</div>
-									<!-- <span class="pull-left email-error" ng-show="signupFormCandidate.email.$dirty&&signupFormCandidate.email.$error.email">Invalid Email.</span> -->
 						</div>
 					</div>
-					<div class="row">
+					<div class="row loginForm_input-group">
 						<div class="col-md-12 col-lg-12 col-sm-12">
-							<div class="input-group loginForm_input-group">
+							<div class="input-group ">
 								<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-								<input type="password" name="password" ng-model="password" placeholder="Password" class="form-control" required>
+								<input type="password" name="password" ng-model="loginPassword" placeholder="Password" class="form-control" required>
 							</div>
 						</div>
 					</div>
 					<span class="pull-right loginForm_forgot-password">
-						<a ui-sref="/forgotPassword" class= "link-forgot-pw">Forgot password?</a>
+						<a href="" ui-sref="/forgotPassword">Forgot password?</a>
 					</span>	
 					<button class="btn btn-lg btn-block btn-info loginForm_submit-btn" ng-disabled="loginForm.email.$invalid || loginForm.password.$invalid">Login</button>
 				</form>

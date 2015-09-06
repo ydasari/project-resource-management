@@ -2,7 +2,7 @@
 /* Large Devices, Wide Screens */
 
     @media only screen and (min-width : $large-device) {
-    	.signUp-page, .login-page{
+    	.signUp-page, .login-page, .forgotPassword-page{
     		background: $signUp-page-background-color;
     		height:100%;
     		position:absolute;
@@ -12,7 +12,7 @@
     		right:0;
     	}
 
-    	.signUp-block, .login-block{
+    	.signUp-block, .login-block, .forgotPassword-block{
     		height: 100%;
     		width: 50%;
     		margin-top:180px;
@@ -36,10 +36,22 @@
 
     	}
 
+        .forgotPasswordForm_submit-btn{
+            @extend .signUpForm_submit-btn;
+            margin-bottom: 30px;
+        }
+
         .signUpForm_required-fields, .email-error{
             color:red;
             margin-top:-20px;
             margin-bottom: 20px;
+        }
+        .email-error-forgot-password{
+             color:red;
+            margin-top:-10px;
+            margin-bottom: 20px;
+
+
         }
         
         .loginForm_forgot-password{

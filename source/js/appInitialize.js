@@ -23,6 +23,16 @@ app.config(function($stateProvider, $urlRouterProvider){
 			url: '/login',
 			templateUrl: 'login.html',
 			controller: 'authCtrl'
+		})
+		.state('/userHome',{
+			url:'/userHome',
+			templateUrl: 'userHome.html',
+			controller: 'userHomeCtrl'
+		})
+		.state('/forgotPassword',{
+			url: '/forgotPassword',
+			templateUrl: 'forgotPassword.html',
+			controller: 'forgotPasswordCtrl'
 		});		
 		$urlRouterProvider.otherwise('/');
 });

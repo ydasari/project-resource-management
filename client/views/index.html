@@ -24,11 +24,20 @@
 				<a class="navbar-brand uhg_logo" href="#">United Health Group</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right" ng-if="mainNav">
 					<li><a ui-sref="/signUp" class="navbar__item"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 					<li><a ui-sref="/login" class="navbar__item"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				</ul>
+				<ul class="nav navbar-nav navbar-right" ng-if="loggedInUserNav">
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle navbar__item" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> {{userName}}</a>
+						<ul class="dropdown-menu">
+							<li><a href="" ng-click="logOut()">LogOut</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
+			
 		</div>
 	</nav>
 	<div ui-view></div>

@@ -7,7 +7,7 @@ var projectSchema = mongoose.Schema({
 		isAdmin: String,
 		isAccepted: String,
 		description: String,
-		{type:mongoose.Schema.ObjectId, ref: 'User'}
+		user_id: {type:mongoose.Schema.ObjectId, ref: 'User'}
 	}],
 	startDate: Date,
 	endDate: Date,

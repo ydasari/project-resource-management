@@ -12,7 +12,7 @@ var express           = require('express'),
 require('./config/mongoDbConfig');
 
 // pass passport for configuration
-//require('./config/passport')(passport); 
+require('./config/passport')(passport); 
 
 
 // parse application/x-www-form-urlencoded
@@ -43,8 +43,8 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 //requiring api routes for routing through application
-//var router = require('./server/routeCalls');
-//app.use('/', router);
+var router = require('./server/routeCalls');
+app.use('/', router);
 
 
 

@@ -5,6 +5,14 @@ app.get('/', function (req, res) {
   res.render('index.html');
 });
 
+app.get('/forgotPassword', function(req, res){
+    res.render('forgotPassword.html');
+});
+
+// app.get('/resetPasswordToken', function(req, res){
+//     ///validae token
+//     res.render('resetPassword.html');
+// });
 
 
 // route to test if the user is logged in or not
@@ -25,18 +33,18 @@ app.get('/', function (req, res) {
                     console.log("this email is already taken");
                     res.redirect('/#/signup');
                 }
+
                 if (!user) {
-                    res.send({
-                        failuremessage: 'emailused'
-                    });
+                    if(user===false){
+                         res.send({message: 'emailused', user:user});      
+                    }
+                    else{
+                          res.send({message: 'emailused', user:user});
+                    }
+                  
                 }
                 if(user){
-                    
-                    //console.log("email taken in routes");
-                    res.send({
-                        message: 'successful signup',
-                        user: user
-                    });
+                    res.send({message: 'successful signup', user: user});
                 }
             })(req, res, next);
         });
@@ -60,15 +68,17 @@ app.get('/', function (req, res) {
                     return next(err);
                 }
                 if(!user){
-                    return res.send(401,{ success : false, message : 'authentication failed' });
-                    res.send({
-                        message:'no user'
-                    });
+                    console.log("the user is: ",user);
+                    return res.status(401).send({success : false, message : 'authentication failed'});
+                    //return res.send(401,{ success : false, message : 'authentication failed' });
                 }
                 req.login(user, function(err){
+                    console.log("test1");
                     if(err){
                         return next(err);
+                        console.log("test2");
                     }
+                    console.log("test3");
                     res.send({
                         message: 'successful login',
                         user: user

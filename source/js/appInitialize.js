@@ -33,6 +33,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 			url: '/forgotPassword',
 			templateUrl: 'forgotPassword.html',
 			controller: 'forgotPasswordCtrl'
+		})
+		.state('/resetPasswordToken/:token',{
+			url:'/resetPasswordToken/:token',
+			templateUrl: 'resetPassword.html',
+			controller: 'resetPasswordCtrl'
 		});		
 		$urlRouterProvider.otherwise('/');
 });

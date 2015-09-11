@@ -50,6 +50,6 @@ app.use('/', router);
 
 require('./server/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-app.listen(8000, function() {
+app.listen(3000, function() {
   console.log('I m Listening...');
 })

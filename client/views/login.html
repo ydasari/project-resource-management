@@ -2,11 +2,19 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="login-block center-block">
-				<div class="alert alert-danger" ng-if="signupSuccess">
+				<div class="alert alert-success" ng-if="signupSuccess">
 					<a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>Thank you for registering with us!</strong>
+					<strong>Thank you for registering with us! Please Login with your credentials</strong>
+				</div>
+				<div class="alert alert-success" ng-if="passwordUpdated">
+					<a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Your password was successfully changed! Please login with your new credentials</strong>
 				</div>
 				<h3 class="text-center login-block_header">Enter your credentials</h3>
+				<div class="alert alert-danger" ng-if="invalidCredentials">
+					<a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Invalid credentials</strong>
+				</div>
 				<form role="form" name="loginForm" ng-submit="loginUser()" novalidate>
 					<div class="row">
 						<div class="col-md-12 col-lg-12 col-sm-12">

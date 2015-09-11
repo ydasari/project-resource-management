@@ -40,7 +40,6 @@ module.exports = function(passport) {
 
                 // if no user is found, return the message
                 if (!user)
-                   
                     return done(null, false, req.flash('loginMessage', 'No user found.'));
 
                 if (!user.validPassword(password))
@@ -83,7 +82,8 @@ module.exports = function(passport) {
 
                     // check to see if theres already a user with that email
                     if (user) {
-                        console.log("email taken1");
+                        console.log("email taken");
+
                         //res.send({message: 'email taken'});
 
                         return done(null, false, req.flash('signupMessage', 'That email is already taken.'));

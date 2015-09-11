@@ -1,6 +1,10 @@
-app.controller('forgotPasswordCtrl', ['$scope', 'authService', function($scope, authService){
+app.controller('forgotPasswordCtrl', ['$scope', '$q', 'authService', '$localStorage', '$timeout', function($scope, $q, authService, $localStorage, $timeout){
+
+	$scope.tokenFailed = $localStorage.tokenStatus;
 
 	$scope.forgotPassword = function(){
+		delete $localStorage.tokenStatus;
+
 		authService.forgotPasswordLink($scope.forgotPasswordEmail).then(function(data){
 			console.log(data);
 			if(data.message === 'emailFound'){
